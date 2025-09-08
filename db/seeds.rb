@@ -8,7 +8,6 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-
 Invoices.destroy_all
 ServiceUsages.destroy_all
 Reservations.destroy_all
@@ -25,42 +24,28 @@ Rooms.create!([
 ])
 
 Guests.create!([
-  { first_name: "Juan", last_name: "Pérez", email: "juan@example.com", phone: "123456789", document_id: "11111111" },
-  { first_name: "María", last_name: "Gómez", email: "maria@example.com", phone: "987654321", document_id: "22222222" },
-  { first_name: "Pedro", last_name: "López", email: "pedro@example.com", phone: "555555555", document_id: "33333333" }
+  { first_name: "Juan", last_name: "Pérez", email: "juan@example.com", phone: "123456789", document_id: "11k111" },
+  { first_name: "María", last_name: "Gómez", email: "maria@example.com", phone: "987654321", document_id: "22j222" },
+  { first_name: "Pedro", last_name: "López", email: "pedro@example.com", phone: "555555555", document_id: "33b333" }
 ])
 
 Services.create!([
-  { name: "Room Service", price: 20, is_active: true },
+  { name: "Cleaning", price: 20, is_active: true },
   { name: "Spa", price: 50, is_active: true },
   { name: "Laundry", price: 10, is_active: true }
 ])
 
 Reservations.create!([
-  { code: "ABC123", guest_id: Guests.first.id, room_id: Rooms.first.id, check_in: Date.today, check_out: Date.today + 2, status: 0, adults: 2, children: 0 },
-  { code: "DEF456", guest_id: Guests.second.id, room_id: Rooms.second.id, check_in: Date.today + 1, check_out: Date.today + 3, status: 0, adults: 1, children: 1 }
+  { code: "ABC123", guest_id: 123, room_id: 312, check_in: Date.today, check_out: Date.today + 2 , status: 0, adults: 2, children: 0 },
+  { code: "DEF456", guest_id: 645, room_id: 532, check_in: Date.today + 3, check_out: Date.today + 4, status: 0, adults: 1, children: 1 }
 ])
 
 ServiceUsages.create!([
-  { reservation_id: Reservations.first.id, service_id: Services.first.id, quantity: 2, used_at: DateTime.now, note: "Extra towels" },
-  { reservation_id: Reservations.second.id, service_id: Services.second.id, quantity: 1, used_at: DateTime.now, note: "Massage session" }
+  { reservation_id: 5345, service_id: 1235, quantity: 2, used_at: Date.today + 5, note: "En efecto, funciona" },
+  { reservation_id: 1241, service_id: 1234, quantity: 1, used_at: Date.today + 6, note: "brigido siono" }
 ])
 
 Invoices.create!([
-  { reservation_id: Reservations.first.id, 
-    nights_subtotal: 2 * Rooms.first.price, 
-    services_subtotal: 2 * Services.first.price, 
-    tax: ((2 * Rooms.first.price + 2 * Services.first.price) * 0.19).to_i, 
-    total: (2 * Rooms.first.price + 2 * Services.first.price + ((2 * Rooms.first.price + 2 * Services.first.price) * 0.19).to_i), 
-    issued_at: DateTime.now, 
-    status: "paid" 
-  },
-  { reservation_id: Reservations.second.id, 
-    nights_subtotal: 2 * Rooms.second.price, 
-    services_subtotal: 1 * Services.second.price, 
-    tax: ((2 * Rooms.second.price + 1 * Services.second.price) * 0.19).to_i, 
-    total: (2 * Rooms.second.price + 1 * Services.second.price + ((2 * Rooms.second.price + 1 * Services.second.price) * 0.19).to_i), 
-    issued_at: DateTime.now, 
-    status: "unpaid" 
-  }
+  { reservation_id: 111, nights_subtotal: 23, services_subtotal: 121, tax: 33, total: 1212, issued_at: Date.today + 7, status: "yo caxo que pago" },
+  { reservation_id: 222, nights_subtotal: 32, services_subtotal: 244, tax: 44, total: 1231, issued_at: Date.today + 8, status: "este loquito no pago, ojo" }
 ])
