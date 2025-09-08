@@ -1,0 +1,13 @@
+User Stories
+
+As an Owner, I want Room management, so that it becomes easier and more accessible the management of the hotel. I also keep the log of the rooms and the information of the room if it is available or not and track the rooms who need cleaning service.
+
+As an Owner, I want Guest registration so that I know who is staying in the hotel and which rooms will be occupied. This will make the management more efficient and help to prevent any possible mistakes during the registration.
+
+As a Worker, I want Reservation creation and room assignment, so that the process of reservation is faster, efficient and easier for the customer to have a room. This prevents information mistakes, and with this we maintain a good log for the management of the hotel.
+
+As an Owner, I want Service consumption tracking, so that we have a log of what type of service the customer prefers, and if the customer consumes a service, we can include them in the final price.
+
+As a Owner, I want Check-in and check-out, so that we know when a customer confirms the arrival or departure of the room. With that we can update the information about the room status.
+
+As a Owner, I want Invoice generation, so that all the money management is official and legal, and the customer receives a slip of what he consumes or purchased.
