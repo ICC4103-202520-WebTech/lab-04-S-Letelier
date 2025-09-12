@@ -1,0 +1,10 @@
+<h1>Reservations</h1>
+<h2> Here are the Reservations: </h2>
+
+<h4>
+  <% @reservations.each do |reservation| %>
+    <li>
+      Reservation <%= link_to reservation.code, reservation_path(reservation) %>    
+    </li>
+  <% end %>
+</h4>

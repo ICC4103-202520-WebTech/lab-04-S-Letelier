@@ -16,22 +16,22 @@ Guests.destroy_all
 Rooms.destroy_all
 
 Rooms.create!([
-  { number: "101", room_type: 0, price: 100, status: 0 },
+  { number: "101", room_type: 0, price: 100, status: 1 },
   { number: "102", room_type: 1, price: 150, status: 0 },
-  { number: "103", room_type: 2, price: 250, status: 0 },
+  { number: "103", room_type: 2, price: 250, status: 1 },
   { number: "104", room_type: 0, price: 90,  status: 0 },
-  { number: "105", room_type: 1, price: 160, status: 0 }
+  { number: "105", room_type: 1, price: 160, status: 1 }
 ])
 
 Guests.create!([
-  { first_name: "Juan", last_name: "Pérez", email: "juan@example.com", phone: "123456789", document_id: "11k111" },
+  { first_name: "Damian", last_name: "Vega", email: "devega@miuandes.cl", phone: "+56 9 5422 7287", document_id: "21.671.670-1" },
   { first_name: "María", last_name: "Gómez", email: "maria@example.com", phone: "987654321", document_id: "22j222" },
   { first_name: "Pedro", last_name: "López", email: "pedro@example.com", phone: "555555555", document_id: "33b333" }
 ])
 
 Services.create!([
   { name: "Cleaning", price: 20, is_active: true },
-  { name: "Spa", price: 50, is_active: true },
+  { name: "Spa", price: 50, is_active: false },
   { name: "Laundry", price: 10, is_active: true }
 ])
 

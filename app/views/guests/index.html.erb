@@ -1,0 +1,12 @@
+<h1>Guests</h1>
+
+<h2> Here are the Guest </h2>
+
+<h4>
+  <% @guests.each do |guest| %>
+    <li>
+        Guest <%= link_to guest.first_name, guest_path(guest) %>
+        <%= link_to guest.last_name, guest_path(guest) %>
+    </li>
+  <% end %>
+</h4>

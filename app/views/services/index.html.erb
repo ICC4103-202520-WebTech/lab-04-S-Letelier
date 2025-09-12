@@ -1,0 +1,11 @@
+<h1>Services</h1>
+<h2> Here are the Reservations: </h2>
+
+<h4>
+  <% @services.each do |service| %>
+    <li>
+      Service of <%= link_to service.name, service_path(service) %> 
+      
+    </li>
+  <% end %>
+</h4>
