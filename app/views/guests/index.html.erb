@@ -1,5 +1,4 @@
 <h1>Guests</h1>
-
 <h2> Here are the Guest </h2>
 
 <h4>
@@ -9,4 +8,10 @@
         <%= link_to guest.last_name, guest_path(guest) %>
     </li>
   <% end %>
+
 </h4>
+
+<p> </p>
+<%= link_to "Reservations", reservations_path %>
+<%= link_to "Rooms", rooms_path %>
+<%= link_to "Services", services_path %>

@@ -7,3 +7,5 @@ class ServicesController < ApplicationController
     @service = Services.find(params[:id])
   end
 end
+
+

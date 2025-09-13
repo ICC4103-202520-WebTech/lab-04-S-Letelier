@@ -1,6 +1,6 @@
 <h1>Rooms</h1>
 
-<ul>
+<h4>
   <% @rooms.each do |room| %>
     <li>
       <%= link_to room.number, room_path(room) %>
@@ -8,8 +8,13 @@
       - Price: $<%= room.price %>
       - Status: <%= room.status %>
 
-    </li>
+    </li>    
   <% end %>
-</ul>
+</h4>
+
+<p> </p>
+<%= link_to "Guest", guests_path %>
+<%= link_to "Reservations", reservations_path %>
+<%= link_to "Services", services_path %>
 
 

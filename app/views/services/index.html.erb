@@ -5,7 +5,13 @@
   <% @services.each do |service| %>
     <li>
       Service of <%= link_to service.name, service_path(service) %> 
-      
     </li>
+
   <% end %>
+
 </h4>
+
+<p> </p>
+<%= link_to "Guest", guests_path %>
+<%= link_to "Rooms", rooms_path %>
+<%= link_to "Reservations", reservations_path %>
